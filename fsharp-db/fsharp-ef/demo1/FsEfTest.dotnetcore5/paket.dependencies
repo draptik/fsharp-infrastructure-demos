@@ -1,0 +1,7 @@
+source https://www.nuget.org/api/v2
+
+nuget FSharp.Core
+
+source ./packages-local
+nuget EntityFrameworkCore.FSharp
+nuget Microsoft.EntityFrameworkCore.Sqlite
