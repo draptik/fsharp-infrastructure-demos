@@ -6,7 +6,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Folder Include="Data\Migrations" />
         <Compile Include="Data/ApplicationDbContext.fs" />
         <Compile Include="Models/ErrorViewModel.fs" />
         <Compile Include="Controllers/HomeController.fs" />
