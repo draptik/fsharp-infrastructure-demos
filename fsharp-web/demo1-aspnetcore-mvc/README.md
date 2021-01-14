@@ -1,7 +1,7 @@
 # ASP.NET Core with F#
 
 This demo is a 1:1 port of a default C# web application project with "Basic Authentication". This template option
-does not exist by default for F# projects, because EF Core doesn't support migrations.
+does not exist by default for F# projects, because EF Core doesn't support migrations in F#.
 
 Using "Basic Authentication" means using Microsoft's Identity plattform. For people unfamiliar with
 Identity:
@@ -16,11 +16,13 @@ Yes, it's also OAuth2 compliant.
 
 ## Using EF Core with Identity
 
-EF Core doesn't support migrations. So, to get Identity up and running, we have to use a workaround.
+EF Core doesn't support migrations in F#. So, to get Identity up and running, we have to use a workaround.
 
 - create a C# web project with "Basic Authentication"
 - export the C# migration into an SQL script file
 - apply the SQL script to the F# project's sqlite db
+
+This creates all database tables required by Identity.
 
 PoC works...
 
