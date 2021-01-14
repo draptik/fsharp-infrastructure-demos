@@ -19,10 +19,16 @@ Yes, it's also OAuth2 compliant.
 EF Core doesn't support migrations in F#. So, to get Identity up and running, we have to use a workaround.
 
 - create a C# web project with "Basic Authentication"
+    - `dotnet new mvc --auth Individual`
 - export the C# migration into an SQL script file
+    - `dotnet ef script migration.sql` (and remove the first 2 lines...)
 - apply the SQL script to the F# project's sqlite db
+    - `cp migration.sql <fsharp-folder-containing-the-Program.fs-file>`
+    - `./apply-migration.sh` (Content: `cat migration.sql | sqlite3 app.db`)
 
 This creates all database tables required by Identity.
+
+Start F# project. It should behave the same way the C# projects behaves.
 
 PoC works...
 
