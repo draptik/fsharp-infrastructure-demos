@@ -5,10 +5,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="WeatherForecast.fs"/>
-        <Compile Include="Controllers/WeatherForecastController.fs"/>
-        <Compile Include="Startup.fs"/>
-        <Compile Include="Program.fs"/>
+        <Compile Include="WeatherForecast.fs" />
+        <Compile Include="Controllers/WeatherForecastController.fs" />
+        <Compile Include="Startup.fs" />
+        <Compile Include="Program.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+      <PackageReference Include="VeryGood.AspNetCore.Identity.Dapper" Version="5.0.0" />
+      <PackageReference Include="VeryGood.AspNetCore.Identity.DatabaseScripts.DbUp" Version="5.0.0" />
     </ItemGroup>
 
 </Project>
